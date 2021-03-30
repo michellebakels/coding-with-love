@@ -1,0 +1,54 @@
+[debug] [2021-03-30T19:51:15.943Z] ----------------------------------------------------------------------
+[debug] [2021-03-30T19:51:15.945Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2021-03-30T19:51:15.945Z] CLI Version:   8.18.0
+[debug] [2021-03-30T19:51:15.946Z] Platform:      darwin
+[debug] [2021-03-30T19:51:15.946Z] Node Version:  v15.2.1
+[debug] [2021-03-30T19:51:15.947Z] Time:          Tue Mar 30 2021 15:51:15 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-03-30T19:51:15.947Z] ----------------------------------------------------------------------
+[debug] [2021-03-30T19:51:15.947Z] 
+[debug] [2021-03-30T19:51:15.952Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-30T19:51:15.953Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/michellebakels/Documents/Projects/coding-with/coding-with-love
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-03-30T19:51:26.066Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-30T19:51:26.066Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-30T19:51:26.281Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 30 Mar 2021 19:51:26 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-30T19:51:26.306Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"coding-with-love","name":"coding-with-love"}
+[debug] [2021-03-30T19:51:26.487Z] <<< HTTP RESPONSE 409 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 30 Mar 2021 19:51:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=131","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-30T19:51:26.487Z] <<< HTTP RESPONSE BODY {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2021-03-30T19:51:26.625Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:329:20)
+    at Request.EventEmitter.emit (node:domain:467:12)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (node:events:329:20)
+    at Request.EventEmitter.emit (node:domain:467:12)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (node:events:435:28)
+    at IncomingMessage.emit (node:events:341:22)
+    at IncomingMessage.EventEmitter.emit (node:domain:467:12)
+    at endReadableNT (node:internal/streams/readable:1294:12)
+    at processTicksAndRejections (node:internal/process/task_queues:80:21)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID coding-with-love. Please try again with a unique project ID.
