@@ -1,38 +1,47 @@
-.App {
+* {
+  background: #f9f3f3;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'La Belle Aurore', cursive;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.img-of-love {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  max-width: 100vw;
+  height: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.love {
+  border: solid 1px black;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  line-height: 75px;
+  text-align: center;
+  margin: 12px 24px;
+  cursor: pointer;
+  font-family: 'La Belle Aurore', cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.all-the-love{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 65vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
+footer {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
